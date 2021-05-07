@@ -1,0 +1,6 @@
+<h1>Este {{ data.name }} tiene los siguientes cursos:</h1>
+<ul>
+  {% for course in data.courses %}
+    <li>{{ course }}</li>
+  {% endfor %}
+</ul>
