@@ -43,8 +43,8 @@ class Student:
 
 @app.route('/ciclofor')
 def ciclofor():
-  courses = ['C#','Python','Javascript','R']
-
+  c1 = ['C#','Python','Javascript','R']
+  c2 = ['Ruby','Python','Javascript','R']
   # data = {
   #   "name" : "Victor",
   #   "description" : "Esta loquito",
@@ -52,9 +52,11 @@ def ciclofor():
   #   "courses" : courses
   # }
 
-  s1 = Student("Victor","Esta loco", courses)
-
-  return render_template('ciclofor.html', s1 = s1)
+  s1 = Student("Victor","Esta loquito", c1)
+  s2 = Student("Susana","Esta loquita", c2)
+  s3 = Student("Dudmit","Este si esta locote",c2)
+  students = [s1,s2,s3]
+  return render_template('ciclofor.html', students = students)
 
 
 

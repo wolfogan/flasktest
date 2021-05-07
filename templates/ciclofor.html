@@ -1,7 +1,10 @@
-<h1>Este {{ s1.name }} tiene los siguientes cursos:</h1>
-<ul>
-  {% for course in s1.courses %}
-    <li>{{ course }}</li>
-  {% endfor %}
-</ul>
 
+{% for student in students %}
+  <h1 style="border: 1px solid black;">Este {{ student.name }} tiene los siguientes cursos:</h1>
+  <ul>
+    {% for course in student.courses %}
+      <li>{{ course }}</li>
+    {% endfor %}
+  </ul>
+  <br/>
+{% endfor %}
