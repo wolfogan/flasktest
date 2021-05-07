@@ -35,19 +35,26 @@ def conditional():
   }
   return render_template('conditional.html', data = data)
 
+class Student:
+  def __init__(self, name, description, courses):
+    self.name = name
+    self.description = description
+    self.courses = courses
 
 @app.route('/ciclofor')
 def ciclofor():
   courses = ['C#','Python','Javascript','R']
 
-  data = {
-    "name" : "Victor",
-    "description" : "Esta loquito",
-    "is_premium": False,
-    "courses" : courses
-  }
-  return render_template('ciclofor.html', data = data)
+  # data = {
+  #   "name" : "Victor",
+  #   "description" : "Esta loquito",
+  #   "is_premium": False,
+  #   "courses" : courses
+  # }
 
+  s1 = Student("Victor","Esta loco", courses)
+
+  return render_template('ciclofor.html', s1 = s1)
 
 
 
